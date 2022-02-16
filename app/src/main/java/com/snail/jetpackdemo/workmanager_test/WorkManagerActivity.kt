@@ -3,10 +3,12 @@ package com.snail.jetpackdemo.workmanager_test
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
 import com.snail.jetpackdemo.R
 import com.snail.jetpackdemo.databinding.ActivityWorkManagerBinding
+import java.time.Duration
 
 class WorkManagerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

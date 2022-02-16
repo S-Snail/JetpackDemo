@@ -1,8 +1,10 @@
 package com.snail.jetpackdemo.workmanager_test
 
 import android.content.Context
+import android.util.Log
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import kotlinx.coroutines.delay
 
 /**
  * 第一步，定义Work工作单元
@@ -12,6 +14,7 @@ import androidx.work.WorkerParameters
  */
 class UploadWork(appContext: Context, workerParams: WorkerParameters) :
     Worker(appContext, workerParams) {
+    private val TAG = "WorkManager_Test"
     override fun doWork(): Result {
         //Do the work here -- in this case ,upload the image
         uploadImages()
@@ -19,7 +22,6 @@ class UploadWork(appContext: Context, workerParams: WorkerParameters) :
     }
 
     private fun uploadImages() {
-
-
+        Log.d(TAG, "上传图片")
     }
 }

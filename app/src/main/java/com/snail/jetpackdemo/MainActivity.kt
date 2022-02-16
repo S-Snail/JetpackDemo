@@ -7,6 +7,7 @@ import com.snail.jetpackdemo.databinding.ActivityMainBinding
 import com.snail.jetpackdemo.lifecycle_test.MyObserver
 import com.snail.jetpackdemo.livedata_test.NameActivity
 import com.snail.jetpackdemo.viewmodel_test.ViewModelActivity
+import com.snail.jetpackdemo.workmanager_test.WorkManagerActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         this.lifecycle.addObserver(MyObserver())
         binding.tvHelloWord.setOnClickListener {
-            startActivity(Intent(this, ViewModelActivity::class.java))
+            startActivity(Intent(this, WorkManagerActivity::class.java))
         }
     }
 }
